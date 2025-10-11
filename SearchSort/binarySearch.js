@@ -2,9 +2,9 @@ function binarySearch(n, arr) {
   let start = 0,
     end = arr.length - 1;
   while (start <= end) {
-    let mid = parseInt((start + end) / 2);
+    let mid = start + parseInt((end - start) / 2);
     if (arr[mid] == n) {
-      return true;
+      return mid;
     }
     if (arr[mid] < n) {
       start = mid + 1;
@@ -12,7 +12,9 @@ function binarySearch(n, arr) {
       end = mid - 1;
     }
   }
-  return false;
+  return -1;
 }
 
-binarySearch();
+// binarySearch();
+
+console.log(9 % 7);
